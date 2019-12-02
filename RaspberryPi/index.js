@@ -9,14 +9,14 @@ var robot = arduino.robot;
 const sensorServer = require('./modules/server.js');
 const serverSocket = require('./modules/serverSocket.js');
 
+serverSocket.connectSocket();
+exports.server = sensorServer.app;
+
 //tether
 var controller = require('./modules/tether.js');
 
 //tether means that the robot will drive from controller connection
-console.log("Tethered Connection:", controller.isTethered);
-
-serverSocket.connectSocket();
-exports.server = sensorServer.app;
+console.log("Tethered Connection:", controller.isTethered());
 
 console.log("--------- C++ Function Examples ---------");
 console.log("cppFunctions: ", cppFunctions);

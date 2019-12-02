@@ -1,6 +1,6 @@
 import openSocket from 'socket.io-client';
-//const socket = openSocket('http://localhost:3002');
-const socket = openSocket('http://10.0.10.11:3002');
+const socket = openSocket('http://localhost:3002');
+//const socket = openSocket('http://10.0.10.11:3002');
 
 function subscribeToTimer(cb) {
     console.log("hello");

@@ -41,9 +41,11 @@ app.listen(port, () => {
     console.log('URL: %s:%s', webserver.hostname, port);
 });
 
+/*
 app.get('/', function (req, res) {
     res.sendFile(__dirname+'/robotClient/status.html');
 });
+*/
 
 app.get('/status', cors(webserver.cors), function(req, res, next) {
     //console.log("got a message")
