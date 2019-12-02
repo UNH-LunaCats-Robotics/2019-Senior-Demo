@@ -1,0 +1,16 @@
+div {
+    border: solid 1px #6c757d;  
+    align-items: flex-end;
+}
+
+.row {
+    background-color: peachpuff;
+}
+
+.col {
+    background-color: lightblue;
+}
+ 
+p, h1, h2, h3 {
+    margin: 0px; padding: 0px;
+}

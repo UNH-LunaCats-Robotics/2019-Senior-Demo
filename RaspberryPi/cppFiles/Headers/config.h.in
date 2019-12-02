@@ -1,0 +1,4 @@
+#cmakedefine MAC 1
+#cmakedefine LINUX 1
+#cmakedefine WINDOWS 1
+#cmakedefine DEBUG 1

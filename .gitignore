@@ -1,0 +1,24 @@
+#ignore the build folder
+build/
+
+#ignore the googletest imported library
+googletest/
+
+#ignore an experimental directory made
+Other/
+
+#ignore .vscode folder
+.vscode/
+
+#arduino build code
+build-uno/
+
+#keep custom config settings
+config.h
+
+#keep node modules from cluttering git
+node_modules/
+
+*.log
+
+.DS_Store

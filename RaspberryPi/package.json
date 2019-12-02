@@ -1,0 +1,22 @@
+{
+  "name": "lunacat_robot_server",
+  "version": "1.0.0",
+  "description": "server that communicates with the laptop to run the robot",
+  "main": "index.js",
+  "scripts": {
+    "build": "node-gyp rebuild",
+    "clean": "node-gyp clean",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "UNH",
+  "license": "ISC",
+  "devDependencies": {},
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-status-monitor": "^1.2.6",
+    "gamepad": "^1.6.0",
+    "node-addon-api": "^1.7.1",
+    "serialport": "^7.1.5"
+  }
+}

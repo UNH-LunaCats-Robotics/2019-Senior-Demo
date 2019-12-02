@@ -1,0 +1,70 @@
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  color: white;
+}
+
+.Bubble {
+  background-color: aquamarine;
+  width: 50px;
+  height: 50px;
+  position: relative;
+  top: 5px;
+  right: 5px;
+  border-radius: 50%;
+}
+
+.JoystickRim {
+  background-color: darkgray;
+  width:100px;
+  height: 100px;
+  position: relative;
+  border-radius: 50%;
+}
+
+.JoystickCircle {
+  background-color: gray;
+  width:60px;
+  height:60px;
+  position: relative;
+  top: 20px;
+  left: 20px;
+  border-radius: 50%;
+}
+
+.JoystickButton{
+  border-radius: 50%;
+  width:40px; 
+  height: 40px;
+  text-align: center;
+  vertical-align: middle;
+  font-weight: bold;
+  font-size: 150%;
+  background-color: lightgray;
+}
+
+.GridBackground{
+  width:384px;
+  height:256px;
+  background-color: lightgray;
+  border-color: yellow;
+  border-width: 2;
+  border-style: solid;
+}
+
+.GridPoint{
+  border-radius:50%;
+  width:4px;
+  height:4px;
+  position: absolute;
+  background-color:green;
+}
+
+.RobotPoint{
+  border-radius:50%;
+  width:4px;
+  height:4px;
+  position: relative;
+  background-color:black;
+}
