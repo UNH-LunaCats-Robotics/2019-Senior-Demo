@@ -1,0 +1,6 @@
+#!/bin/sh 
+osascript <<END 
+tell application "Terminal"
+    do script "cd \"`pwd`\";cd \"RaspberryPi\";node index.js;exit"
+end tell
+END

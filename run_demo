@@ -1,0 +1,8 @@
+FILE=./RaspberryPi/build/Release/rpserver.node
+
+if ! test -f "$FILE"; then
+    npm run build --prefix RaspberryPi/
+fi 
+
+./NodeServer/run_node
+./RaspberryPi/run_rp

@@ -366,7 +366,7 @@ void parseCommand(String buff)
   bool success = (input != -1);
   
   if (!success) {
-    Serial.println("Bad Json String");
+    Serial.println("0");
   }
   else {
     int start = isOn(buff);
