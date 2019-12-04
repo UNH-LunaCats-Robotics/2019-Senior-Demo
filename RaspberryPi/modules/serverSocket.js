@@ -68,20 +68,18 @@ var connectSocket = function(){
     });
 
     //this function still works!
-    var n = 0;
-    var x_i = 1, y_i = 1;
-    var x = 0,   y = 0;
-    var inc = 1;
+    var n = 0, inc = 9; 
+    var x_i = inc, y_i = inc, z_i = 0.75;
+    var x = 0,     y = 0,     z = 0;
+    var obj = false;
     var testPoints = setInterval( () => {
-      if(n < 300) {
-        var z = Math.random()*20;
-        if(n%2) z = -z;
-
-        if(x_i > 0 && x+x_i>380) x_i = -inc;
-        if(x_i < 0 && x+x_i<0) x_i = inc;
-        if(y_i > 0 && y+y_i>380) y_i = -inc;
-        if(y_i < 0 && y+y_i<0) y_i = inc;
-        x+=x_i; y+=y_i;
+      if(n < 1000 ) {
+        if(x_i > 0 && x+x_i>370) x_i = -inc;
+        if(x_i < 0 && x+x_i<5) x_i = inc;
+        if(y_i > 0 && y+y_i>252) y_i = -inc;
+        if(y_i < 0 && y+y_i<5) y_i = inc;
+        if((z_i > 0 && z+z_i>12) || (z_i < 0 && z+z_i<-12)) z_i = -z_i;
+        x+=x_i; y+=y_i; z+=z_i;
 
         var p = new rpserver.Point(x, y, z);
         var res = p.X() + ":" + p.Y() + ":" + p.Z();

@@ -54,17 +54,17 @@
 }
 
 .GridPoint{
-  border-radius:50%;
-  width:4px;
-  height:4px;
+  //border-radius:50%;
+  width:10px;
+  height:10px;
   position: absolute;
   background-color:green;
 }
 
 .RobotPoint{
   border-radius:50%;
-  width:4px;
-  height:4px;
+  width:8px;
+  height:8px;
   position: relative;
   background-color:black;
 }
