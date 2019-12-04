@@ -69,13 +69,25 @@ var connectSocket = function(){
 
     //this function still works!
     var n = 0;
+    var x_i = 1, y_i = 1;
+    var x = 0,   y = 0;
+    var inc = 1;
     var testPoints = setInterval( () => {
-      var z = Math.random()*20;
-      if(n%2) z = -z;
-      var p = new rpserver.Point(Math.random()*380, Math.random()*252, z);
-      var res = p.X() + ":" + p.Y() + ":" + p.Z();
-      socket.emit('lidar', res);
-      n++;
+      if(n < 300) {
+        var z = Math.random()*20;
+        if(n%2) z = -z;
+
+        if(x_i > 0 && x+x_i>380) x_i = -inc;
+        if(x_i < 0 && x+x_i<0) x_i = inc;
+        if(y_i > 0 && y+y_i>380) y_i = -inc;
+        if(y_i < 0 && y+y_i<0) y_i = inc;
+        x+=x_i; y+=y_i;
+
+        var p = new rpserver.Point(x, y, z);
+        var res = p.X() + ":" + p.Y() + ":" + p.Z();
+        socket.emit('lidar', res);
+        n++;
+      }
       //console.log("n: ", n, " X: ", p.X(), " Y: ", p.Y(), " Z: ", p.Z());
     }, 20);  
 

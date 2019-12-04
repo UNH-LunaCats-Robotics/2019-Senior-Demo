@@ -63,12 +63,14 @@ class GameField extends React.Component {
             console.log("Point out of bounds");
             return;
         }
-        this.setState({points: this.state.points.push({
+        console.log(this.state.points)
+        this.state.points.push({
             key: this.state.count,
             x: xp,
             y: yp,
             z: zp
-        })});
+        })
+
         this.setState({count: this.state.count + 1});
     }
 
@@ -104,13 +106,16 @@ class GameField extends React.Component {
     }
 
     render() {
+        
+        //console.log("state point value: ", this.state)
+        var points = this.state.points.map( (inc) => 
+        {
+            return <GridPoint key = {inc.key} x = {inc.x} y = {inc.y} color = {this.getColor(inc.z)}/>
+        })
+
         return (
             <div className="GridBackground" style={{backgroundColor: "white"}}>
-                {this.state.points.map( (inc) => 
-                    {
-                        return <GridPoint key = {inc.key} x = {inc.x} y = {inc.y} color = {this.getColor(inc.z)}/>
-                    }
-                )}
+                {points}
                 <RobotPoint x= {this.state.robotLoc[0]} y = {this.state.robotLoc[1]}/>
             </div>
         )
